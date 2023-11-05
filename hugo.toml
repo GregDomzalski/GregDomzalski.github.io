@@ -1,0 +1,25 @@
+baseURL = 'http://GregDomzalski.github.io/'
+languageCode = 'en-us'
+title = 'Greg Domzalski'
+theme = 'mini'
+paginate = 3
+
+[permalinks]
+posts = '/posts/:title/'
+
+[markup]
+[markup.highlight]
+guessSyntax = true
+style = 'emacs'
+
+[social]
+github = 'https://github.com/GregDomzalski'
+
+
+[params]
+author = 'Greg Domzalski'
+bio = 'Staff Software Engineer @ Yubico'
+description = 'My Blog'
+enableRSS = true
+enableComments = false
+enableGoogleAnalytics = false
