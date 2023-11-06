@@ -1,0 +1,38 @@
+Order = ['Work', 'Volunteering', 'Education']
+
+[[Work]]
+Entity = 'Yubico'
+From = 'Nov 2017'
+To = 'Present'
+Title = 'Staff Software Engineer'
+Description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+
+[[Work]]
+Entity = 'Microsoft'
+From = 'Jun 2008'
+To = 'Nov 2017'
+Title = 'Software Development Engineer II'
+Description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+
+[[Volunteering]]
+Entity = 'Kennett Classic'
+From = 'Mar 2023'
+To = 'Present'
+Title = 'Docent'
+Description = ''
+
+[[Volunteering]]
+Entity = 'MEOW Cat Rescue'
+From = 'Feb 2014'
+To = 'Present'
+Title = 'Adoption counselor, Foster, IT consultant'
+Description = ''
+
+[[Education]]
+Entity = 'Syracuse University'
+From = '2004'
+Title = 'Bachelor of Science in Computer Science'
+To = '2008'
+Description = """
+Enrolled in graduate level compiler design in addition to standard curriculum.
+"""

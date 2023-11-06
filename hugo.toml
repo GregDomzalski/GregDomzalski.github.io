@@ -1,20 +1,13 @@
 baseURL = 'http://GregDomzalski.github.io/'
 languageCode = 'en-us'
 title = 'Greg Domzalski'
-theme = 'mini'
+# theme = 'mini' # Still requiring layout for page, taxonomy, and section
 paginate = 3
 
-[permalinks]
-posts = '/posts/:title/'
-
-[markup]
-[markup.highlight]
-guessSyntax = true
-style = 'emacs'
-
 [social]
+linkedin = 'https://www.linkedin.com/in/gregdomzalski'
 github = 'https://github.com/GregDomzalski'
-
+twitter = 'https://twitter.com/#'
 
 [params]
 author = 'Greg Domzalski'
@@ -23,3 +16,29 @@ description = 'My Blog'
 enableRSS = true
 enableComments = false
 enableGoogleAnalytics = false
+
+[menu]
+[[menu.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+[[menu.main]]
+    name = 'CV'
+    pageRef = '/cv'
+    weight = 20
+[[menu.main]]
+    name = 'Blog'
+    pageRef = '/posts'
+    weight = 30
+[[menu.main]]
+    name = 'Recommendations'
+    pageRef = '/recommended'
+    weight = 40
+[[menu.main]]
+    name = 'Books'
+    pageRef = '/books'
+    weight = 50
+[[menu.main]]
+    name = 'Contact'
+    pageRef = '/contact'
+    weight = 60
