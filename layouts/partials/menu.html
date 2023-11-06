@@ -3,7 +3,7 @@
 
 {{- with index site.Menus $menuID }}
   <nav>
-    <ul class="flex items-center space-x-2">
+    <ul class="flex items-center space-x-6 tracking-tight">
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
     </ul>
   </nav>

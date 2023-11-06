@@ -1,0 +1,14 @@
+<div class="mb-8">
+    <p class="not-prose text-md font-semibold text-sky-700">
+        <!-- TODO: Add link only if one exists -->
+        {{ if .Get "Href" }}
+            <a href="{{ .Get "Href" }}" target="_blank" rel="noopener noreferrer">{{- .Get "Title" -}}</a>
+        {{ else }}
+            {{- .Get "Title" -}}
+        {{ end }}
+    </p>
+    <p class="not-prose text-gray-500 mb-1">{{- .Get "Subtitle" -}}</p>
+    <div class="leading-snug text-sm mt-3">
+        {{- .InnerDeindent | markdownify -}}
+    </div>
+</div>

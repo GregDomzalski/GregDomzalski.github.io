@@ -31,8 +31,8 @@ enableGoogleAnalytics = false
     pageRef = '/posts'
     weight = 30
 [[menu.main]]
-    name = 'Recommendations'
-    pageRef = '/recommended'
+    name = 'Things I use'
+    pageRef = '/uses'
     weight = 40
 [[menu.main]]
     name = 'Books'
