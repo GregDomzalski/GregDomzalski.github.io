@@ -1,10 +1,10 @@
 <section>
     <h1 class="text-3xl font-bold">Experience</h1>
     <div class="mt-10">
-        {{ range $.Site.Data.cv.Order }}
-            {{ $SectionTitle := . }}
-            {{ $SectionEntries := index $.Site.Data.cv $SectionTitle }}
+        {{- range $.Site.Data.cv.Order -}}
+            {{- $SectionTitle := . -}}
+            {{- $SectionEntries := index $.Site.Data.cv $SectionTitle }}
             {{ partial "cv_entry.html" (dict "SectionTitle" $SectionTitle "SectionEntries" $SectionEntries) }}
-        {{ end }}
+        {{- end }}
     </div>
 </section>

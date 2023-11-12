@@ -1,0 +1,13 @@
+{{ define "main" }}
+    <article>
+        <header class="prose max-w-none prose-h1:mb-0 prose-p:mt-1 prose-p:mb-1">
+            <h1 class="">{{ .Title }}</h1>
+            <p class="ml-2 text-sm text-gray-500">First published: {{ .Date.Format "2006-01-02" }}</p>
+            <p class="ml-2 text-sm text-gray-500 pb-2">Last updated: {{ .Lastmod.Format "2006-01-02" }}</p>
+        </header>
+        <div class="prose max-w-none">
+            {{ .Content }}
+        </div>
+    </article>
+{{ end }}
+

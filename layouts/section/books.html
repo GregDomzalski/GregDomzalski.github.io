@@ -1,0 +1,18 @@
+{{ define "main" }}
+    <article class="prose max-w-none mb-10">
+        <header>
+            <h1>{{ .Title }}</h1>
+        </header>
+        <div class="prose max-w-none">
+            {{ .Content }}
+        </div>
+    </article>
+    <ul>
+        {{ range .Pages }}
+        <li class="border-l border-gray-300 pl-5">
+            <a href="{{ .Permalink }}" class="text-xl font-semibold text-sky-700">{{ .Title }}</a>
+            <p class="text-gray-900 mt-3">{{ .Summary }}</p>
+        </li>
+        {{ end }}
+    </ul>
+{{ end }}
