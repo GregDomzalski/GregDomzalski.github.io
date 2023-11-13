@@ -1,4 +1,4 @@
-baseURL = 'http://GregDomzalski.github.io/'
+baseURL = 'https://www.gregdom.com/'
 languageCode = 'en-us'
 title = 'Greg Domzalski'
 # theme = 'mini' # Still requiring layout for page, taxonomy, and section
