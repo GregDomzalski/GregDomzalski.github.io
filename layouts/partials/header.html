@@ -1,8 +1,15 @@
 <header class="bg-white shadow">
-    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-        <a href="#" class="text-lg font-semibold text-gray-900 no-underline tracking-tighter">Greg Domzalski</a>
-        <div class="text-gray-800">
-            {{- partial "menu.html" (dict "menuID" "main" "page" .) -}}
-        </div>
-    </div>
+    <nav
+        class="container mx-auto px-6 py-3 flex justify-between items-center flex-wrap md:flex-no-wrap"
+        x-data="{ open: false }">
+            <!-- logo -->
+            <a href="#" class="text-lg font-semibold text-gray-900 no-underline tracking-tighter">Greg Domzalski</a>
+            <button id="menu-button" class="px-4 md:hidden text-base text-xl" x-on:click="open = !open"><i class="fas fa-bars"></i></button>
+
+            <!-- mobile menu -->
+            {{ partial "menu_compact.html" . }}
+
+            <!-- desktop menu -->
+            {{ partial "menu_full.html" . }}
+    </nav>
 </header>

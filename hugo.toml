@@ -1,7 +1,6 @@
 baseURL = 'https://www.gregdom.com/'
 languageCode = 'en-us'
 title = 'Greg Domzalski'
-# theme = 'mini' # Still requiring layout for page, taxonomy, and section
 paginate = 3
 
 [social]
@@ -17,31 +16,83 @@ enableRSS = true
 enableComments = false
 enableGoogleAnalytics = false
 
+# Home
+# Blog
+# Projects
+# - GeNet
+# - Refraction
+# - BinForge
+# - PowerShell Utilities
+# - DotFiles
+# About me
+# - CV
+# - Things I use
+# - Contact
+
 [menu]
-[[menu.main]]
+  [[menu.main]]
     name = 'Home'
     pageRef = '/'
+    weight = 100
+
+  [[menu.main]]
+    name = "Blog"
+    pageRef = "/posts"
+    weight = 200
+
+  ## Projects
+  [[menu.main]]
+    name = "Projects"
+    pageRef = '/projects'
+    weight = 300
+
+  [[menu.main]]
+    name = "GeNet"
+    parent = "Projects"
+    pageRef = "/projects/GeNet"
     weight = 10
-[[menu.main]]
-    name = 'CV'
-    pageRef = '/cv'
+  [[menu.main]]
+    name = "Refraction"
+    parent = "Projects"
+    pageRef = "/projects/Refraction"
     weight = 20
-[[menu.main]]
-    name = 'Blog'
-    pageRef = '/posts'
+  [[menu.main]]
+    name = "BinForge"
+    parent = "Projects"
+    pageRef = "/projects/BinForge"
     weight = 30
-[[menu.main]]
-    name = 'Things I use'
-    pageRef = '/uses'
+  [[menu.main]]
+    name = "PowerShell Utils"
+    parent = "Projects"
+    pageRef = "/projects/PowerShell"
     weight = 40
-[[menu.main]]
-    name = 'Books'
-    pageRef = '/books'
+  [[menu.main]]
+    name = "DotFiles"
+    parent = "Projects"
+    pageRef = "/projects/DotFiles"
     weight = 50
-[[menu.main]]
+
+  ## About me
+  [[menu.main]]
+    name = 'About me'
+    pageRef = '/about'
+    weight = 400
+
+  [[menu.main]]
+    name = "CV"
+    parent = "About me"
+    pageRef = "/about/cv"
+    weight = 10
+  [[menu.main]]
+    name = 'Things I use'
+    parent = "About me"
+    pageRef = '/about/uses'
+    weight = 20
+  [[menu.main]]
     name = 'Contact'
+    parent = "About me"
     pageRef = '/contact'
-    weight = 60
+    weight = 30
 
 [module]
   [module.hugoVersion]

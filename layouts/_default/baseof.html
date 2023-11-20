@@ -1,3 +1,5 @@
+{{ $js := resources.Get "js/index.js" | js.Build | resources.Minify | fingerprint }}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +15,7 @@
     </main>
 
     {{ partial "footer" . }}
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
 </body>
 
 </html>

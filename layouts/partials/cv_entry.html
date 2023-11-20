@@ -1,11 +1,11 @@
 <div class="flex flex-col md:flex-row mb-10 border-l border-gray-300">
-    <div class="md:w-1/5 pl-5 font-semibold text-gray-800">
+    <div class="w-full md:w-1/5 pl-2 md:pl-5 font-semibold text-gray-800">
         {{ .SectionTitle }}
     </div>
-    <div class="md:w-4/5">
-        <div class="mb-8">
+    <div class="w-full md:w-4/5">
+        <div class="mb-2 md:mb-8 ml-4 md:ml-0 mt-2 md:mt-0">
             {{ range $Entry := .SectionEntries }}
-            <div class="mb-6">
+            <div class="mb-2 md:mb-6">
                 <p class="text-md font-semibold text-sky-700">{{ .Entity }} - {{ .Title }}</p>
                 <p class="text-sm text-gray-500 mb-1">{{ .From }} - {{ .To }}</p>
                 <p class="leading-relaxed">

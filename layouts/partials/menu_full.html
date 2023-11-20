@@ -1,0 +1,33 @@
+<ul class="md:tracking-tight items-center w-full flex-wrap hidden md:flex md:w-auto md:flex-row md:space-x-6">
+    {{- range site.Menus.main }}
+      {{- partial "inline/menu_full/top_link.html" . }}
+    {{- end }}
+</ul>
+
+{{- define "partials/inline/menu_full/top_link.html" }}
+    <li class="relative flex items-center" x-data="{ open: false }" @mouseover="open = true" @mouseleave="open = false">
+        {{- $itemURL := "#" }}
+        {{- with .URL }}
+            {{- $itemURL = . }}
+        {{- end }}
+        <a href="{{- $itemURL -}}" :class="open ? 'text-sky-600' : ''">{{ .Name }}</a>
+        {{- with .Children }}
+            {{- partial "inline/menu_full/child_group.html" . }}
+        {{- end }}
+{{- end }}
+
+{{- define "partials/inline/menu_full/child_group.html" }}
+<ul class="min-w-max absolute origin-bottom-left top-6 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5" x-show="open" x-collapse>
+    {{- range . }}
+    {{- partial "inline/menu_full/child_entry.html" . }}
+    {{- end }}
+</ul>
+{{- end }}
+
+{{- define "partials/inline/menu_full/child_entry.html" }}
+    {{- $itemURL := "#" }}
+    {{- with .URL }}
+        {{- $itemURL = . }}
+    {{- end }}
+    <li class="my-3"><a class="px-4 hover:text-sky-600" href="{{- $itemURL -}}">{{ .Name }}</a></li>
+{{- end }}
