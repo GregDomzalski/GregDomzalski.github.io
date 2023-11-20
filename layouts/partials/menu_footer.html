@@ -1,0 +1,14 @@
+<ul class="md:tracking-tight items-center w-full flex-wrap hidden md:flex md:w-auto md:flex-row md:space-x-6">
+    {{- range site.Menus.main }}
+      {{- partial "inline/menu_footer/top_link.html" . }}
+    {{- end }}
+</ul>
+
+{{- define "partials/inline/menu_footer/top_link.html" }}
+    <li class="">
+        {{- $itemURL := "#" }}
+        {{- with .URL }}
+            {{- $itemURL = . }}
+        {{- end }}
+        <a href="{{- $itemURL -}}">{{ .Name }}</a>
+{{- end }}

@@ -1,22 +1,36 @@
+<button id="menu-button" class="px-4 md:hidden text-base text-xl" x-on:click="open = !open"><i class="fas fa-bars"></i></button>
+
 <ul class="mt-4 text-base tracking-wider items-center md:hidden w-full flex-wrap flex-col" x-show="open" x-collapse>
-    <li class="py-2"><a href="#" class="hover:font-bold">Home</a></li>
-    <li class="py-2"><a href="#" class="hover:font-bold">Blog</a></li>
-    <li class="py-2">
-        <a href="#" class="hover:font-bold">Projects</a>
-        <ul class="ml-4 mt-2 space-y-2">
-            <li><a href="#">GeNet</a></li>
-            <li><a href="#">Refraction</a></li>
-            <li><a href="#">BinForge</a></li>
-            <li><a href="#">PowerShell Utilities</a></li>
-            <li><a href="#">DotFiles</a></li>
-        </ul>
-    </li>
-    <li class="py-2">
-        <a href="#" class="hover:font-bold">About me</a>
-        <ul class="ml-4 mt-2 space-y-2">
-            <li><a href="#">CV</a></li>
-            <li><a href="#">Things I use</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </li>
+    {{- range site.Menus.main }}
+      {{- partial "inline/menu_compact/top_link.html" . }}
+    {{- end }}
 </ul>
+
+{{- define "partials/inline/menu_compact/top_link.html" }}
+    {{- $itemURL := "#" }}
+    {{- with .URL }}
+        {{- $itemURL = . }}
+    {{- end }}
+    <li class="py-2">
+        <a href="{{- $itemURL -}}" class="hover:font-bold">{{ .Name }}</a>
+        {{- with .Children }}
+            {{- partial "inline/menu_compact/child_group.html" . }}
+        {{- end }}
+    </li>
+{{- end }}
+
+{{- define "partials/inline/menu_compact/child_group.html" }}
+<ul class="ml-4 mt-2 space-y-2">
+    {{- range . }}
+    {{- partial "inline/menu_compact/child_entry.html" . }}
+    {{- end }}
+</ul>
+{{- end }}
+
+{{- define "partials/inline/menu_compact/child_entry.html" }}
+    {{- $itemURL := "#" }}
+    {{- with .URL }}
+        {{- $itemURL = . }}
+    {{- end }}
+    <li><a href="{{- $itemURL -}}">{{ .Name }}</a></li>
+{{- end }}
