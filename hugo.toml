@@ -16,19 +16,6 @@ enableRSS = true
 enableComments = false
 enableGoogleAnalytics = false
 
-# Home
-# Blog
-# Projects
-# - GeNet
-# - Refraction
-# - BinForge
-# - PowerShell Utilities
-# - DotFiles
-# About me
-# - CV
-# - Things I use
-# - Contact
-
 [menu]
   [[menu.main]]
     name = 'Home'
@@ -72,11 +59,29 @@ enableGoogleAnalytics = false
     pageRef = "/projects/DotFiles"
     weight = 50
 
+  ## Books
+  [[menu.main]]
+    name = "Books"
+    pageRef = "/books"
+    weight = 400
+
+  [[menu.main]]
+    name = ".NET Esoterica"
+    parent = "Books"
+    pageRef = "/books/dotnet-esoterica"
+    weight = 10
+
+  [[menu.main]]
+    name = "Homelab How-to"
+    parent = "Books"
+    pageRef = "/books/homelab"
+
+
   ## About me
   [[menu.main]]
     name = 'About me'
     pageRef = '/about'
-    weight = 400
+    weight = 500
 
   [[menu.main]]
     name = "CV"
