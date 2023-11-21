@@ -9,11 +9,17 @@
     </article>
     {{ range .Pages }}
     <div class="mb-10 pl-5 border-l border-gray-300">
-        <a href="{{ .Permalink }}"><p class="text-xl font-semibold text-sky-700">{{ .Title }}</p></a>
-        <p class="text-sm text-gray-500 pb-2">First posted on: {{ .Date.Format "2006-01-02" }}</p>
+        {{ $padding := cond (not .Date) "pb-2" ""}}
+        <a href="{{ .Permalink }}"><p class="text-xl font-semibold text-sky-700 {{ $padding }}">{{ .Title }}</p></a>
+        {{ with .Date }}
+            <p class="text-sm text-gray-500 pb-2">Published: {{ .Format "January 01, 2006" }}</p>
+        {{ end }}
         <p class="leading-relaxed">
             {{ .Summary }}
         </p>
+        {{ if .Truncated }}
+            <a href="{{ .Permalink }}" class="text-sky-600">Read more</a>
+        {{ end }}
     </div>
     {{ end }}
 {{ end }}

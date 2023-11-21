@@ -1,0 +1,113 @@
+Order:
+  - Work
+  - Volunteering
+  - Education
+Work:
+  - Entity: Yubico
+    From: Nov 2017
+    To: Present
+    Title: Staff Software Engineer
+    ShortDescription: Leading or engaged in several cross-company initiatives
+      ranging from improving our developer documentation, to improving our
+      manufacturing, to exploring new product opportunities.
+    Description: >
+      As a staff software engineer, I am not limited to a single project. I help
+      bring ideas and initiatives to fruition by influencing company leadership,
+
+      connecting individuals, and providing a cohesive vision. I seek out opportunities to increase efficiency, reduce technical debt and burden, and lift
+
+      my team through mentorship and guidance.
+
+
+      The latest project of which I have contributed that has been publicly announced is our FIDO2 pre-registration initiative in partnership with Okta. FIDO2
+
+      pre-registration reduces the friction for employees of companies using Okta + YubiKey by creating a credit-card like experience. Your company's IT staff
+
+      only need register a user with a FIDO factor in Okta, and we deliver a pre-configured key directly to your employee. Once received, your employee can access
+
+      your internal apps using the strongest form of authentication.
+  - Entity: Yubico
+    From: Dec 2020
+    To: Dec 2021
+    Title: Software Engineer Manager
+    ShortDescription:
+      Oversaw the teams responsible for developing Yubico's .NET SDK
+      as well as our manufacturing and supply chain software.
+    Description: >
+      Oversaw the teams responsible for developing Yubico's .NET SDK as well as
+      our manufacturing and supply chain software.
+
+      Grew the team's headcount to properly staff all efforts and oversaw the promotion of several team members.
+
+      After a full year of management, I learned that I am a leader - not a manager. I felt that I could better fulfill that role
+
+      as an individual contributor.
+  - Entity: Microsoft
+    From: Jun 2008
+    To: Nov 2017
+    Title: Software Development Engineer II
+    ShortDescription: Worked in the Core OS group (Windows) developing storage
+      management and backup technologies. Was the original principal author of
+      the Windows Storage PowerShell cmdlets.
+    Description: >
+      Universal Windows Platform - Storage APIs
+
+      - Added secure mechanism for file source attribution, allowing low and high privileged apps to negotiate the trust level of a file
+
+      - Removed MAX_PATH limitations from both Win32 and Windows Runtime file + directory APIs, effectively bringing long path support to the Windows platform
+
+      - Enlightened key Win32 file and directory APIs to the Universal Windows Platform app sandbox, enabling developers to bring their existing code into the Windows Store directly (without relying on the "desktop bridge")
+
+
+      Storage Management + Storage Spaces
+
+      - Designed and implemented WMI management APIs for managing Storage Area Networks, Storage Spaces, and locally attached disks and volumes
+
+      - Designed and implemented PowerShell cmdlets that allows for IT Pro management of storage
+
+      - Created proprietary algorithm to make management of storage accessible to Windows Clusters completely transparent to developers and IT pros.
+
+      - Created diagnostic tool that gathers and packages all relevant data to diagnose storage faults on both standalone and clustered systems. The tool is resilient enough to work even when cluster quorum has been lost, yet easy enough to use that a support engineer need only send a single line of instruction to a customer
+
+
+      Volume Shadow-copy Service
+
+      - Co-wrote LUN Resync feature allowing enterprise customers to recover data instantly without sacrificing their backup
+
+      - Assisted in design and implementation of "Remote VSS" feature, allowing server content stored on SMB network shares to be backed up and restored.
+
+
+      Leadership
+
+      - Mentored several generations of new hires and interns
+
+      - Acted as "Git Champion", helping an organization of ~80 developers transition from Source Depot to Git.
+
+      - Assisted in Windows-wide effort of identifying and updating engineering tools and scripts to work on Git.
+
+      - Contributor to the "Windows Internal Library", a C++ library enabling internal Windows developers to write correct code with higher productivity
+Volunteering:
+  - Entity: Kennett Classic
+    From: Mar 2023
+    To: Present
+    Title: Docent
+    ShortDescription:
+      Kennett Classic is a vintage computer gallery and museum. I
+      greet visitors, share stories, and look after things.
+  - Entity: MEOW Cat Rescue
+    From: Feb 2014
+    To: Present
+    Title: Adoption counselor, Foster, IT consultant
+    ShortDescription: Facilitated adoption of cats, lead shelter shifts, hospice
+      fostered our cats in need. Additionally provided technological guidance
+      and support to the shelter staff.
+Education:
+  - Entity: Syracuse University
+    From: "2004"
+    Title: Bachelor of Science in Computer Science
+    To: "2008"
+    ShortDescription:
+      Acheived a B.S. in Computer Science, with a particular focus
+      on computer architecture, operating system design, and compiler design.
+      Received additional liberal arts coursework as well, providing a well
+      rounded formal education.

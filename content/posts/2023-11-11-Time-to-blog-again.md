@@ -1,9 +1,6 @@
 +++
 Title = "Time to start blogging again"
 Date = 2023-11-11
-Summary = """
-I'm back posting things on the internet. No, not that I really ever reliably did so in the first place. But this time it's gonna be different!
-"""
 +++
 
 Hello you. I have no idea who you are. Right now I'm not really sure who my intended audience will be. Most likely like-minded high-tech individuals like myself. Or maybe not? Time will tell.

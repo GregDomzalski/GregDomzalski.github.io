@@ -2,8 +2,17 @@
     <article>
         <header class="prose max-w-none prose-h1:mb-0 prose-p:mt-1 prose-p:mb-1">
             <h1 class="">{{ .Title }}</h1>
-            <p class="ml-2 text-sm text-gray-500">First published: {{ .Date.Format "2006-01-02" }}</p>
-            <p class="ml-2 text-sm text-gray-500 pb-2">Last updated: {{ .Lastmod.Format "2006-01-02" }}</p>
+            <div class="not-prose pt-2 pb-4">
+                <ul class="ml-2 text-sm text-gray-500 flex flex-row space-x-4">
+                    {{ with .Date }}
+                        <li>Published: {{ .Format "January 1, 2006" }}</li>
+                    {{ end }}
+                    {{ with .Lastmod }}
+                        <li>/</li>
+                        <li>Last updated: {{ .Format "January 1, 2006" }}</li>
+                    {{ end }}
+                </ul>
+            </div>
         </header>
         <div class="prose max-w-none">
             {{ .Content }}

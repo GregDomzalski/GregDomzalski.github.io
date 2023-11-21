@@ -1,9 +1,9 @@
 +++
-title = 'Things I use'
-summary = 'Hardware, software, tools, etc. that I use'
+title = 'Hardware, software, tools, etc. that I use'
+date = "2023-11-20"
+lastMod = "2023-11-20"
+weight = "200"
 +++
-
-# Hardware, software, tools, etc. that I use
 
 I use all sorts of technology - whether that be for work, fun, or because it's necessary. Oh, and I'm also very opinionated. Here I share the hardware, software, tools, etc. that I use on a regular basis. I've provided links to the manufacturer page or to where you can make a purchase. Not every item is still available, however. In those cases I've linked to the closest equivalents I could find.
 
