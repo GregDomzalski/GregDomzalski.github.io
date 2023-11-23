@@ -1,0 +1,12 @@
+<nav aria-label="breadcrumb" class="text-sm text-sky-600 font-semibold ml-1">
+    <ol class="list-none flex flex-row">
+        {{ range .Ancestors.Reverse }}
+            <li>
+                <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+            </li>
+        {{ end }}
+        <li>
+            <a aria-current="page" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        </li>
+    </ol>
+</nav>

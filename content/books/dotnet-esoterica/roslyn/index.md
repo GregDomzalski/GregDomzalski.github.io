@@ -1,3 +1,0 @@
-# Rosyln
-
-Test content

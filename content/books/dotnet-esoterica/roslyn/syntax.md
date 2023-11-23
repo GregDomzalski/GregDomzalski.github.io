@@ -1,5 +1,12 @@
-# Syntax
++++
+Title = "Syntax deep dive"
+Type = "book"
 
+[menu]
+  [menu.dotnet]
+    Name = "Syntax deep dive"
+    Parent = "Roslyn SDK"
++++
 
 ## Declarations
 
