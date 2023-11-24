@@ -42,6 +42,6 @@
 
         <section>
             <h1 class="text-3xl font-bold">Experience</h1>
-            {{ partial "experience.html" . }}
+            {{ partial "experience.html" (dict "Context" . "Details" false) }}
         </section>
 {{end}}

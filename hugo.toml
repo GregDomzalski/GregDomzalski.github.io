@@ -15,6 +15,7 @@ description = 'My Blog'
 enableRSS = true
 enableComments = false
 enableGoogleAnalytics = false
+enableEmoji = true
 
 [menu]
   [[menu.main]]

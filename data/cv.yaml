@@ -2,6 +2,7 @@ Order:
   - Work
   - Volunteering
   - Education
+
 Work:
   - Entity: Yubico
     From: Nov 2017
@@ -13,19 +14,19 @@ Work:
     Description: >
       As a staff software engineer, I am not limited to a single project. I help
       bring ideas and initiatives to fruition by influencing company leadership,
+      connecting individuals, and providing a cohesive vision. I seek out opportunities
+      to increase efficiency, reduce technical debt and burden, and lift my team through
+      mentorship and guidance.
 
-      connecting individuals, and providing a cohesive vision. I seek out opportunities to increase efficiency, reduce technical debt and burden, and lift
 
-      my team through mentorship and guidance.
+      The latest project of which I have contributed that has been publicly announced is
+      our FIDO2 pre-registration initiative in partnership with Okta. FIDO2 pre-registration
+      reduces the friction for employees of companies using Okta + YubiKey by creating a
+      credit-card like experience. Your company's IT staff only need register a user with a
+      FIDO factor in Okta, and we deliver a pre-configured key directly to your employee.
+      Once received, your employee can access your internal apps using the strongest form
+      of authentication.
 
-
-      The latest project of which I have contributed that has been publicly announced is our FIDO2 pre-registration initiative in partnership with Okta. FIDO2
-
-      pre-registration reduces the friction for employees of companies using Okta + YubiKey by creating a credit-card like experience. Your company's IT staff
-
-      only need register a user with a FIDO factor in Okta, and we deliver a pre-configured key directly to your employee. Once received, your employee can access
-
-      your internal apps using the strongest form of authentication.
   - Entity: Yubico
     From: Dec 2020
     To: Dec 2021
@@ -34,14 +35,13 @@ Work:
       Oversaw the teams responsible for developing Yubico's .NET SDK
       as well as our manufacturing and supply chain software.
     Description: >
-      Oversaw the teams responsible for developing Yubico's .NET SDK as well as
-      our manufacturing and supply chain software.
+      Grew the team's headcount to properly staff all efforts and oversaw the promotion of
+      several team members.
 
-      Grew the team's headcount to properly staff all efforts and oversaw the promotion of several team members.
 
-      After a full year of management, I learned that I am a leader - not a manager. I felt that I could better fulfill that role
+      After a full year of management, I learned that I am a leader - not a manager. I felt
+      that I could better fulfill that role as an individual contributor.
 
-      as an individual contributor.
   - Entity: Microsoft
     From: Jun 2008
     To: Nov 2017
@@ -50,34 +50,45 @@ Work:
       management and backup technologies. Was the original principal author of
       the Windows Storage PowerShell cmdlets.
     Description: >
-      Universal Windows Platform - Storage APIs
+      **Universal Windows Platform - Storage APIs**
 
-      - Added secure mechanism for file source attribution, allowing low and high privileged apps to negotiate the trust level of a file
+      - Added secure mechanism for file source attribution, allowing low and high privileged
+        apps to negotiate the trust level of a file
 
-      - Removed MAX_PATH limitations from both Win32 and Windows Runtime file + directory APIs, effectively bringing long path support to the Windows platform
+      - Removed MAX_PATH limitations from both Win32 and Windows Runtime file + directory APIs,
+        effectively bringing long path support to the Windows platform
 
-      - Enlightened key Win32 file and directory APIs to the Universal Windows Platform app sandbox, enabling developers to bring their existing code into the Windows Store directly (without relying on the "desktop bridge")
+      - Enlightened key Win32 file and directory APIs to the Universal Windows Platform app sandbox,
+        enabling developers to bring their existing code into the Windows Store directly (without
+        relying on the "desktop bridge")
 
 
-      Storage Management + Storage Spaces
+      **Storage Management + Storage Spaces**
 
-      - Designed and implemented WMI management APIs for managing Storage Area Networks, Storage Spaces, and locally attached disks and volumes
+      - Designed and implemented WMI management APIs for managing Storage Area Networks, Storage Spaces,
+      and locally attached disks and volumes
 
       - Designed and implemented PowerShell cmdlets that allows for IT Pro management of storage
 
-      - Created proprietary algorithm to make management of storage accessible to Windows Clusters completely transparent to developers and IT pros.
+      - Created proprietary algorithm to make management of storage accessible to Windows Clusters
+        completely transparent to developers and IT pros.
 
-      - Created diagnostic tool that gathers and packages all relevant data to diagnose storage faults on both standalone and clustered systems. The tool is resilient enough to work even when cluster quorum has been lost, yet easy enough to use that a support engineer need only send a single line of instruction to a customer
-
-
-      Volume Shadow-copy Service
-
-      - Co-wrote LUN Resync feature allowing enterprise customers to recover data instantly without sacrificing their backup
-
-      - Assisted in design and implementation of "Remote VSS" feature, allowing server content stored on SMB network shares to be backed up and restored.
+      - Created diagnostic tool that gathers and packages all relevant data to diagnose storage faults
+        on both standalone and clustered systems. The tool is resilient enough to work even when cluster
+        quorum has been lost, yet easy enough to use that a support engineer need only send a single line
+        of instruction to a customer
 
 
-      Leadership
+      **Volume Shadow-copy Service**
+
+      - Co-wrote LUN Resync feature allowing enterprise customers to recover data instantly without sacrificing
+        their backup
+
+      - Assisted in design and implementation of "Remote VSS" feature, allowing server content stored on SMB
+        network shares to be backed up and restored.
+
+
+      **Leadership**
 
       - Mentored several generations of new hires and interns
 
@@ -85,7 +96,9 @@ Work:
 
       - Assisted in Windows-wide effort of identifying and updating engineering tools and scripts to work on Git.
 
-      - Contributor to the "Windows Internal Library", a C++ library enabling internal Windows developers to write correct code with higher productivity
+      - Contributor to the "Windows Internal Library", a C++ library enabling internal Windows developers to
+        write correct code with higher productivity
+
 Volunteering:
   - Entity: Kennett Classic
     From: Mar 2023
@@ -94,6 +107,7 @@ Volunteering:
     ShortDescription:
       Kennett Classic is a vintage computer gallery and museum. I
       greet visitors, share stories, and look after things.
+
   - Entity: MEOW Cat Rescue
     From: Feb 2014
     To: Present
@@ -101,6 +115,72 @@ Volunteering:
     ShortDescription: Facilitated adoption of cats, lead shelter shifts, hospice
       fostered our cats in need. Additionally provided technological guidance
       and support to the shelter staff.
+    Description: >
+      **MEOW "Buddy"**
+
+
+      - Socialize the cats that are in our cat condos, allowing them some unhindered play time.
+
+      - Observe the temperament of each cat to provide additional notes to the adoption counselors and
+        other volunteers that might better help facilitate adoption.
+
+
+      **9th Life / Medical Foster**
+
+
+      MEOW is a no-kill shelter, we take care of our own cats, even if we know they are ill and no longer
+      adoptable. As a medical foster, I would:
+
+      - Care for cats with mild to moderate medical issues.
+
+      - Provide a quiet and stable home to help speed along their recovery.
+
+      - Coordinate care with the shelter's medical coordinator. When necessary, take them to their veterinary
+        appointments and checkups.
+
+      - Provide them with medical care at home. This would include giving oral and subcutaneous medicines and fluids,
+        syringe feeding, and even supplemental oxygen in one extraordinary case.
+
+      As a 9th life foster, I would take in cats with moderate to severe terminal medical issues. In addition to
+      the responsibilities of a medical foster, I would also:
+
+      - Provide a stable and loving home for them to enjoy their remaining days - whether that be days or years.
+
+      - Work with our medical coordinator to monitor the foster's condition and help make the unfortunate tough
+        call when it was clear they were in too much pain to ethically continue life extending care.
+
+      Between each foster, I would allow myself time to grieve and recover from the loss. Despite the heavy
+      emotional toll, providing this care has been one of the most rewarding experiences of my life.
+
+
+      **Adoption counselor**
+
+
+      I would work with the public to help match them with a cat. While the end goal is an
+      adoption, it was also my responsibility to make sure we were placing the cat into a safe environment and
+      that the adoption had high potential of long-term success. MEOW places strict requirements on adoptions,
+      such as requiring the cat to stay indoors at all times, kittens not to be adopted by themselves or into
+      homes with very young children, etc. This sometimes resulted in some very difficult conversations. It was
+      also my role to educate the public on the adoption process, the best practices for cat care, and to answer
+      any questions they might have.
+
+
+      **Shift lead**
+
+
+      I would oversee an entire day's volunteer shift during the public hours of the shelter. I would
+      delegate tasks amongst the volunteers to make sure the shelter was running smoothly and was a welcoming
+      environment at all times. I was also responsible for training and mentoring the other volunteers, especially
+      the adoption counselors, on the adoption process. I also signed off on all adoption applications and would
+      help make the tough calls on whether or not an applicant was appropriate given our shelter's policies.
+
+
+      **IT consultant**
+
+
+      Maintained a set of about 10 on-site computers within the shelter, along with the file server
+      and software that was used by the shelter staff.
+
 Education:
   - Entity: Syracuse University
     From: "2004"

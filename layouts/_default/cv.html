@@ -7,7 +7,7 @@
             {{ .Content }}
         </div>
 
-        {{ partial "experience.html" . }}
+        {{ partial "experience.html" (dict "Context" . "Details" true) }}
     </article>
 {{ end }}
 

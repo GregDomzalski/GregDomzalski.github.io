@@ -1,0 +1,37 @@
+{{- $menuID := "dotnet" }}
+
+<!-- ToC -->
+{{ with index site.Menus $menuID }}
+{{- range first 1 . }}
+<div class="pl-2 pb-2 font-bold text-lg border-b border-gray-300">
+    <a href="{{ .URL }}" >{{ .Name }}</a>
+</div>
+<ul class="mt-2 space-y-4">
+{{- range .Children }}
+    {{- partial "book/inline/toc_section.html" . }}
+{{- end }}
+</ul>
+{{- end }}
+{{- end }}
+
+
+{{- define "partials/book/inline/toc_section.html" }}
+    <li class="pl-3">
+        {{- $itemURL := "#" }}
+        {{- with .URL }}
+            {{- $itemURL = . }}
+        {{- end }}
+        <a class="font-semibold" href="{{- $itemURL -}}">{{ .Name }}</a>
+        {{- with .Children }}
+            <ul class="my-2 ml-4 space-y-2 text-sm">
+                {{- range . }}
+                {{- $itemURL := "#" }}
+                {{- with .URL }}
+                    {{- $itemURL = . }}
+                {{- end }}
+                <li><a href="{{- $itemURL -}}">{{ .Name }}</a></li>
+                {{- end }}
+            </ul>
+        {{- end }}
+    </li>
+{{- end }}
