@@ -3,7 +3,9 @@
 <!-- ToC -->
 {{ with index site.Menus $menuID }}
 {{- range first 1 . }}
-<div class="pl-2 pb-2 font-bold text-lg border-b border-gray-300">{{ .Name }}</div>
+<div class="pl-2 pb-2 font-bold text-lg border-b border-gray-300">
+    <a href="{{ .URL }}" >{{ .Name }}</a>
+</div>
 <ul class="mt-2 space-y-4">
 {{- range .Children }}
     {{- partial "book/inline/toc_section.html" . }}
