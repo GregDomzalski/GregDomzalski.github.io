@@ -28,7 +28,18 @@
     <!-- Main content -->
     <article class="w-3/4 pl-8 pt-4 prose max-w-none">
         {{ emojify .Content  }}
+
+        {{ range .Pages.ByWeight }}
+        <section>
+            <a href="{{ .Permalink }}"><p class="text-xl font-semibold text-sky-700">{{ .Title }}</p></a>
+            <p class="leading-relaxed">
+                {{ .Summary }}
+            </p>
+            {{ if .Truncated }}
+                <a href="{{ .Permalink }}" class="text-sky-600">Read more</a>
+            {{ end }}
+        </section>
+        {{ end }}
     </article>
 </div>
-
 {{ end }}

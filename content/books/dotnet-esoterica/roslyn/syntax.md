@@ -1,16 +1,32 @@
 +++
-Title = "Syntax deep dive"
+Title = "Understanding C#'s syntax"
 Type = "book"
 
 [menu]
   [menu.dotnet]
-    Name = "Syntax deep dive"
-    Parent = "Roslyn SDK"
+    Name = "Understanding syntax"
+    Identifier = "dotnet.roslyn.syntax"
+    Parent = "dotnet.roslyn"
+    Weight = 10
 +++
+
+C#'s syntax is quite expansive. But there's one particular subset that is relatively self-contained. This subset is also quite interesting when writing source generators as they're often used to find trees to work on, and used to build up the things we're generating.
+
+This, of course, is the *declaration syntax*.
+
+Something is declared whenever we are introducing a name into a compilation unit. For example, creating a new class using the familiar `public class Foo` is a `ClassDeclarationSyntax`. Note that I said you will see a declaration syntax whenever the name is introduced to a compilation unit (think, a single `*.cs` file). This means that you may actually see more than one declaration syntax for the same underlying type. Example: partial classes will have class declaration syntax for each file the class spans.
+
+In this section, we'll go through the various types of declarations that you'll encounter when working with a C# syntax tree.
 
 ## Declarations
 
-![MemberDeclarationSyntax inheritance](images/memberdecl-inheritance.svg "Hierarchy")
+The best way to understand the various types of declaration syntaxes is to simply walk through the inheritance hierarchy using your IDE of course and/or the Microsoft documentation. The problem I did run into is understanding the properties, methods, and things I could do to abstract these different declarations. What is shared? What may look shared but really has different constraints based on the type of syntax?
+
+These are my notes based on what I've found through a combination of reading the public Roslyn SDK documentation, reading the C# language specification, and of course reading the Roslyn source code itself.
+
+Let's start with the bottom of the declaration syntax hierarchy. This is `MemberDeclarationSyntax`. Why "member declaration"? Two reasons: First, this matches the [grammar](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/basic-concepts#73-declarations) in the C# specification. Second, types are members of namespaces... but even namespaces are members of other namespaces. The special case being the `global::` namespace. But for the purposes of syntax, it is the same as all other namespaces.
+
+![MemberDeclarationSyntax inheritance](../images/memberdecl-inheritance.svg "Hierarchy")
 
 `MemberDeclarationSyntax` is derived by:
 - `BaseFieldDeclarationSyntax`
@@ -19,163 +35,21 @@ Type = "book"
 - `BasePropertyDeclarationSyntax`
 - `BaseTypeDeclarationSyntax`
 
-All declarations have an `AttributeList` and `Modifiers`.
+### Components of the base member declaration
 
-### Field declarations
+Not much is here. Only two properties: `AttributeList` and `Modifiers`.
 
-```d2 layout=elk
-direction: up
-BaseFieldDeclarationSyntax -> MemberDeclarationSyntax
-EventFieldDeclarationSyntax -> BaseFieldDeclarationSyntax
-FieldDeclarationSyntax -> BaseFieldDeclarationSyntax
+`AttributeList`s are the attributes attached to the member. For example:
+
+```csharp
+[MyAttribute]
+[MyAttributeWithParams("foo", bar = "baz")]
+public class TestClass
+{
+
+}
 ```
 
-`BaseFieldDeclarationSyntax` is derived by:
-- `EventFieldDeclarationSyntax`
-- `FieldDeclarationSyntax`
+While a `namespace` declaration technically has an attribute list attached to it, these attributes are treated as module-level attributes.
 
-All declarations have a `Declaration` with `SemicolonToken` trivia, in addition to `AttributeList` and `Modifiers`.
-
-Event fields also have an `EventKeyword` trivia.
-
-Field declarations have no additional attributes or trivia.
-
-### Method declarations
-
-```d2 layout=elk
-direction: up
-BaseMethodDeclarationSyntax -> MemberDeclarationSyntax
-ConstructorDeclarationSyntax -> BaseMethodDeclarationSyntax
-ConversionOperatorDeclarationSyntax -> BaseMethodDeclarationSyntax
-DestructorDeclarationSyntax -> BaseMethodDeclarationSyntax
-MethodDeclarationSyntax -> BaseMethodDeclarationSyntax
-OperatorDeclarationSyntax -> BaseMethodDeclarationSyntax
-```
-
-`BaseMethodDeclarationSyntax` is derived by:
-- `ConstructorDeclarationSyntax`
-- `ConversionOperatorDeclarationSyntax`
-- `DestructorDeclarationSyntax`
-- `MethodDeclarationSyntax`
-- `OperatorDeclarationSyntax`
-
-All declarations have a `Body`, `ExpressionBody`, `ParameterList`, and a `SemicolonToken`, in addition to `AttributeList` and `Modifiers`.
-
-Constructor declarations also have an `Identifier` and `Initializer`.
-
-Conversion operator delcarations also have `CheckedKeyword`, `ExplicitInterfaceSpecifier`,  `ImplicitOrExplicitKeyword`, and `OperatorKeyword`.
-
-Destructor declarations also have a `TildeToken` trivia.
-
-Method declarations also have `ConstraintClauses`, `ExplicitInterfaceSpecifier`, `Identifier`, `ReturnType`, and `TypeParameterList`.
-
-Operator declarations also have `CheckedKeyword`, `ExplicitInterfaceSpecifier`, `OperatorKeyword`, `OperatorToken`, and `ReturnType`.
-
-### Namespace declarations
-
-```d2 layout=elk
-direction: up
-
-BaseNamespaceDeclarationSyntax -> MemberDeclarationSyntax
-
-FileScopedNamespaceDeclarationSyntax -> BaseNamespaceDeclarationSyntax
-NamespaceDeclarationSyntax -> BaseNamespaceDeclarationSyntax
-```
-
-`BaseNamespaceDeclarationSyntax` is derived by:
-- `FileScopedNamespaceDeclarationSyntax`
-- `NamespaceDeclarationSyntax`
-
-All declarations have `Externs`, `Members`, `Usings`, and `Name`, in addition to `AttributeList` and `Modifiers`, as well as `NamespaceKeyword` trivia.
-
-File-scoped namespace declarations also have a `SemicolonToken` trivia.
-
-Block namespace declarations also have a `CloseBraceToken`, `OpenBraceToken`, and `SemicolonToken` trivia.
-
-### Property declarations
-
-```d2 layout=elk
-direction: up
-
-BasePropertyDeclarationSyntax -> MemberDeclarationSyntax
-
-EventDeclarationSyntax -> BasePropertyDeclarationSyntax
-IndexerDeclarationSyntax -> BasePropertyDeclarationSyntax
-PropertyDeclarationSyntax -> BasePropertyDeclarationSyntax
-```
-
-`BasePropertyDeclarationSyntax` is derived by:
-- `EventDeclarationSyntax`
-- `IndexerDeclarationSyntax`
-- `PropertyDeclarationSyntax`
-
-All declarations have an `AccessorList`, `ExplicitInterfaceSpecifier`, and `Type` in addition to `AttributeList` and `Modifiers`.
-
-Event declarations have an `EventKeyword`, `Identifier`, and `SemiColonToken`.
-
-Indexer declarations have an `ExpressionBody`, `ParameterList`, as well as `Semicolon`, `SemicolonToken`, and `ThisKeyword` trivia.
-
-Property declarations have an `ExpressionBody`, `Identifier`, and `Initializer`, as well as `Semicolon` and `SemicolonToken` trivia.
-
-### Type declarations
-
-```d2 layout=elk
-direction: up
-
-BaseTypeDeclarationSyntax -> MemberDeclarationSyntax
-
-EnumDeclarationSyntax -> BaseTypeDeclarationSyntax
-TypeDeclarationSyntax -> BaseTypeDeclarationSyntax
-
-ClassDeclarationSyntax -> TypeDeclarationSyntax
-InterfaceDeclarationSyntax -> TypeDeclarationSyntax
-RecordDeclarationSyntax -> TypeDeclarationSyntax
-StructDeclarationSyntax -> TypeDeclarationSyntax
-```
-
-`BaseTypeDeclarationSyntax` is derived by:
-- `EnumDeclarationSyntax`
-- `TypeDeclarationSyntax` which is further derived by:
-  - `ClassDeclarationSyntax`
-  - `InterfaceDeclarationSyntax`
-  - `RecordDeclarationSyntax`
-  - `StructDeclarationSyntax`
-
-All declarations have a `BaseList` and `Identifier` in addition to `AttributeList` and `Modifiers`.
-
-Other trivia include `CloseBraceToken`, `OpenBraceToken`, and `SemicolonToken`.
-
-Enum declarations include `EnumKeyword` and `Members`.
-
-Type declarations include `ConstraintClauses`, `Keyword`, `Members`, `ParameterList`, `TypeParameterList`.
-
-| Property          | Enum               | Class              | Interface          | Record             | Struct             |
-| ----------------- | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
-| AttributeList     | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| BaseList          | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| ConstraintClauses | :x:                | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Identifier        | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Members           | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| Modifiers         | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| ParameterList     | :x:                | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| TypeParameterList | :x:                | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-
-
-While each declaration kind supports modifiers, the set of modifiers may be different. The below table shows the valid modifiers according to the C# language specification.
-
-| Modifier    | Enum               | Class              | Interface          | Record             | Struct             |
-| ----------- | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
-| `new`       | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `public`    | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `protected` | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `internal`  | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `private`   | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `readonly`  | :x:                | :x:                | :x:                | :x:                | :white_check_mark: |
-| `ref`       | :x:                | :x:                | :x:                | :x:                | :white_check_mark: |
-| `abstract`  | :x:                | :white_check_mark: | :x:                | :white_check_mark: | :x:                |
-| `sealed`    | :x:                | :white_check_mark: | :x:                | :white_check_mark: | :x:                |
-| `static`    | :x:                | :white_check_mark: | :x:                | :white_check_mark: | :x:                |
-| `unsafe`    | :x:                | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `partial`   | :x:                | :white_check_mark: | :white_check_mark: | :white_check_mark: | :white_check_mark: |
-| `struct`    | :x:                | :x:                | :x:                | :white_check_mark: | :x:                |
-| `class`     | :x:                | :x:                | :x:                | :white_check_mark: | :x:                |
+Similar with modifiers, the modifiers attached to a `MemberDeclarationSyntax` representing a namespace is kind of special. Namespaces are implicitly `public`. But the author cannot actually change, add, or remove any other modifiers. And indeed, with `modifier`, the list of acceptable options depend on the type of the declaration. We'll show later, syntax by syntax, which `modifier` applies to what `syntax`.

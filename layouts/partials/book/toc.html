@@ -23,15 +23,24 @@
         {{- end }}
         <a class="font-semibold" href="{{- $itemURL -}}">{{ .Name }}</a>
         {{- with .Children }}
-            <ul class="my-2 ml-4 space-y-2 text-sm">
-                {{- range . }}
-                {{- $itemURL := "#" }}
-                {{- with .URL }}
-                    {{- $itemURL = . }}
-                {{- end }}
-                <li><a href="{{- $itemURL -}}">{{ .Name }}</a></li>
-                {{- end }}
-            </ul>
+            {{- partial "book/inline/toc_subsection.html" . }}
         {{- end }}
     </li>
+{{- end }}
+
+{{- define "partials/book/inline/toc_subsection.html" }}
+<ul class="my-2 ml-4 space-y-2 text-sm">
+    {{- range . }}
+    {{- $itemURL := "#" }}
+    {{- with .URL }}
+        {{- $itemURL = . }}
+    {{- end }}
+    <li>
+        <a href="{{- $itemURL -}}">{{ .Name }}</a>
+        {{- with .Children }}
+            {{- partial "book/inline/toc_subsection.html" . }}
+        {{- end }}
+    </li>
+    {{- end }}
+</ul>
 {{- end }}
