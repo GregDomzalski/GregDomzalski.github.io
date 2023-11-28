@@ -1,0 +1,51 @@
+ISymbol
+
+IAliasSymbol -> ISymbol
+IArraySymbol -> ISymbol
+IAssemblySymbol -> ISymbol
+IDiscardSymbol -> ISymbol
+IDynamicTypeSymbol -> ISymbol
+IErrorTypeSymbol -> ISymbol
+IEventSymbol -> ISymbol
+IFieldSymbol -> ISymbol
+IFunctionPointerTypeSymbol -> ISymbol
+ILabelSymbol -> ISymbol
+ILocalSymbol -> ISymbol
+IMethodSymbol -> ISymbol
+IModuleSymbol -> ISymbol
+INamedTypeSymbol -> ISymbol
+INamespaceOrTypeSymbol -> ISymbol
+INamespaceSymbol -> ISymbol
+IParameterSymbol -> ISymbol
+IPointerTypeSymbol -> ISymbol
+IPreprocessingSymbol -> ISymbol
+IPropertySymbol -> ISymbol
+IRangeVariableSymbol -> ISymbol
+ISourceAssemblySymbol -> ISymbol
+ITypeSymbol -> ISymbol
+
+ISourceAssemblySymbol -> IAssemblySymbol
+
+IDynamicTypeSymbol -> INamespaceOrTypeSymbol
+IDynamicTypeSymbol -> ITypeSymbol
+
+IErrorTypeSymbol -> INamedTypeSymbol
+IErrorTypeSymbol -> INamespaceOrTypeSymbol
+IErrorTypeSymbol -> ITypeSymbol
+
+IFunctionPointerTypeSymbol -> INamespaceOrTypeSymbol
+IFunctionPointerTypeSymbol -> ITypeSymbol
+
+INamedTypeSymbol -> INamespaceOrTypeSymbol
+INamedTypeSymbol -> ITypeSymbol
+
+INamespaceSymbol -> INamespaceOrTypeSymbol
+
+IPointerTypeSymbol -> INamespaceOrTypeSymbol
+IPointerTypeSymbol -> ITypeSymbol
+
+ISourceAssemblySymbol -> IAssemblySymbol
+
+ITypeParameterSymbol -> INamespaceOrTypeSymbol
+ITypeParameterSymbol -> ITypeSymbol
+
