@@ -37,28 +37,44 @@ enableEmoji = true
   [[menu.main]]
     name = "GeNet"
     parent = "Projects"
-    pageRef = "/projects/GeNet"
+    url = "https://github.com/GregDomzalski/Refraction"
     weight = 10
+    [menu.main.params]
+      rel = "external"
+      target = "_blank"
+
   [[menu.main]]
     name = "Refraction"
     parent = "Projects"
-    pageRef = "/projects/Refraction"
+    url = "https://github.com/GregDomzalski/GeNet"
     weight = 20
+    [menu.main.params]
+      rel = "external"
+      target = "_blank"
+
   [[menu.main]]
     name = "BinForge"
     parent = "Projects"
-    pageRef = "/projects/BinForge"
+    url = "https://github.com/GregDomzalski/BinForge"
     weight = 30
+    [menu.main.params]
+      rel = "external"
+      target = "_blank"
+      
   [[menu.main]]
     name = "PowerShell Utils"
     parent = "Projects"
     pageRef = "/projects/PowerShell"
     weight = 40
+
   [[menu.main]]
     name = "DotFiles"
     parent = "Projects"
-    pageRef = "/projects/DotFiles"
+    url = "https://github.com/GregDomzalski/dotfiles"
     weight = 50
+    [menu.main.params]
+      rel = "external"
+      target = "_blank"
 
   ## Books
   [[menu.main]]

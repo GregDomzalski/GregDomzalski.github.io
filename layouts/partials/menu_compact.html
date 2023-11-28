@@ -32,5 +32,9 @@
     {{- with .URL }}
         {{- $itemURL = . }}
     {{- end }}
-    <li><a href="{{- $itemURL -}}">{{ .Name }}</a></li>
+    <li>
+        <a href="{{- $itemURL -}}" {{ with .Params.rel }}rel="{{ . }}"{{ end }} {{ with .Params.target }}target="{{ . }}"{{ end }}>
+            {{ .Name }}
+        </a>
+    </li>
 {{- end }}

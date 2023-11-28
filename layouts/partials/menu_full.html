@@ -29,5 +29,9 @@
     {{- with .URL }}
         {{- $itemURL = . }}
     {{- end }}
-    <li class="my-3"><a class="px-4 hover:text-sky-600" href="{{- $itemURL -}}">{{ .Name }}</a></li>
+    <li class="my-3">
+        <a class="px-4 hover:text-sky-600" href="{{- $itemURL -}}" {{ with .Params.rel }}rel="{{ . }}"{{ end }} {{ with .Params.target }}target="{{ . }}"{{ end }}>
+            {{ .Name }}
+        </a>
+    </li>
 {{- end }}
