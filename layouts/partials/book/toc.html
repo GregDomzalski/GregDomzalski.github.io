@@ -1,19 +1,31 @@
 {{- $menuID := "dotnet" }}
 
 <!-- ToC -->
+<div 
+    x-data="{
+        isMobile: (window.innerWidth < 768) ? true : false,
+        open: this.isMobile ? false : true,
+        toggle() { this.open = !this.open },
+        onResize() { this.open = (window.innerWidth < 768) ? false : true }
+     }"
+    x-on:resize.window="onResize">
 {{ with index site.Menus $menuID }}
 {{- range first 1 . }}
-<div class="pl-2 pb-2 font-bold text-lg border-b border-gray-300">
-    <a href="{{ .URL }}" >{{ .Name }}</a>
+<div class="flex justify-between items-center pl-2 pb-2 font-bold text-lg border-b border-gray-300">
+    <a href="{{ .URL }}" class="flex-grow">{{ .Name }}</a>
+    <button id="toc-button" class="px-4 md:hidden" x-on:click="toggle">
+        <i class="transition-transform ease-in-out duration-500 fas fa-chevron-down px-4" :class="open ? 'rotate-0' : '-rotate-180' ">
+        </i>
+    </button>
 </div>
-<ul class="mt-2 space-y-4">
+<ul class="mt-2 space-y-4" x-show="open" x-collapse>
 {{- range .Children }}
     {{- partial "book/inline/toc_section.html" . }}
 {{- end }}
 </ul>
 {{- end }}
 {{- end }}
-
+</div>
 
 {{- define "partials/book/inline/toc_section.html" }}
     <li class="pl-3">
