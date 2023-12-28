@@ -1,6 +1,10 @@
-baseURL = 'https://www.gregdom.com/'
+baseURL = "https://www.gregdom.com/"
+copyright = "© 2023 Greg Domzalski. All rights reserved."
 languageCode = 'en-us'
 title = 'Greg Domzalski'
+titleCaseStyle = "none" # I'll take care of it myself, thank you.
+
+enableEmoji = true
 paginate = 3
 
 [social]
@@ -9,13 +13,20 @@ github = 'https://github.com/GregDomzalski'
 twitter = 'https://twitter.com/#'
 
 [params]
-author = 'Greg Domzalski'
-bio = 'Staff Software Engineer @ Yubico'
-description = 'My Blog'
-enableRSS = true
-enableComments = false
-enableGoogleAnalytics = false
-enableEmoji = true
+  [params.author]
+    name = 'Greg Domzalski'
+    email = 'blog at gregdom dot com'
+  bio = 'Staff Software Engineer @ Yubico'
+
+[outputs]
+  home = ['html']
+  section = ['html', 'rss']
+  taxonomy = ['html']
+  term = ['html']
+
+[services]
+  [services.rss]
+    limit = 10
 
 [menu]
   [[menu.main]]
