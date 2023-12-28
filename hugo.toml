@@ -37,7 +37,7 @@ enableEmoji = true
   [[menu.main]]
     name = "GeNet"
     parent = "Projects"
-    url = "https://github.com/GregDomzalski/Refraction"
+    url = "https://github.com/GregDomzalski/GeNet"
     weight = 10
     [menu.main.params]
       rel = "external"
@@ -46,7 +46,7 @@ enableEmoji = true
   [[menu.main]]
     name = "Refraction"
     parent = "Projects"
-    url = "https://github.com/GregDomzalski/GeNet"
+    url = "https://github.com/GregDomzalski/Refraction"
     weight = 20
     [menu.main.params]
       rel = "external"
