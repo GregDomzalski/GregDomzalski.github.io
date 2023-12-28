@@ -1,6 +1,19 @@
 {{ define "main" }}
 <section class="mb-10">
-    <h1 class="text-5xl font-bold">{{ i18n "404title" }}</h1>
-    <h2 class="text-3xl text-sky-600 py-4">{{ i18n "404subtitle" }}</h2>
+    <h1 class="text-5xl font-bold">Page not found</h1>
+    <h2 class="text-3xl text-sky-600 py-4">The page you are looking for does not exist.</h2>
+
+    <div class="py-4">
+        Have a picture of my cat instead...
+    </div>
+    <div class="pt-4 md:pt-0 mx- md:mx-0 md:w-1/3">
+        {{ with resources.Get "images/max.jpg" }}
+        <img src="{{ .RelPermalink }}" width="300" height="300" alt="Max the cat"
+            class="w-full h-auto border-4 border-white shadow-lg" />
+        {{ end }}
+    </div>
+    <div class="py-4">
+        ... or <a class="underline" href="/">click here</a> to go home.
+    </div>
 </section>
 {{ end }}
