@@ -1,5 +1,5 @@
 +++
-Title = "SDKs - The newer, 'simplified', MSBuild system"
+Title = "MSBuild SDKs"
 Type = "book"
 Weight = 300
 
@@ -11,12 +11,14 @@ Weight = 300
     Weight = 300
 +++
 
-Right now this is the least understood area for me. This section is merely a placeholder for me to do more research into the `Microsoft.NET.SDK` system. I would like to understand how everything works as well as what it will take to author an extended (or from scratch) SDK build system.
+MSBuild can be quite intimidating at first. At least, it was for me. The [SDK-style projects](https://learn.microsoft.com/en-us/dotnet/core/project-sdk/overview) used by .NET today greatly simplifies creating projects, but it pushes even more of the build system into a black box. The goal of this section is to open that box and look inside. To understand not just MSBuild, but the "SDK" projects built on top of them.
 <!--more-->
 
+- MSBuild primer for developers
+- A tour through the stages
 - How the SDK system works
-  - MSBuild 101
-  - A tour through the stages
+  - Anatomy of an SDK
+  - What makes up the Microsoft.NET.SDK?
   - What's needed to build a project?
   - Hooks and extension points
 - Building our own SDK
