@@ -139,3 +139,28 @@ You can change the separator that is returned by specifying it as the second arg
 
 Metadata can be accessed using the `%()` syntax. For example, `%(PackageReference.Version)` will return the version information for each entry in the collection.
 
+# Evaluation order
+
+This is something that's surely to trip you up, as it has for me.
+
+MSBuild processes your build files in phases. There are two primary phases, each with their own sub-phases: Evaluation and Execution.
+
+Properties, ItemGroups, etc. are processed during the evaluation phase. But within this phase, it is done in steps:
+
+1. Evaluate environment variables
+2. Evaluate imports and properties
+3. Evaluate item definitions
+4. Evaluate items (item groups)
+5. Evaluate UsingTask elements
+6. Evaluate targets
+
+What this means is that all of the MSBuild XML is stitched together by the preprocessor first. Then, a first pass is taken and evaluates all of the properties that exist in the global (non-target) scope. Note that items are not yet evaluated!
+
+Then, once that pass has completed, item definitions are processed. You can think of this as a compiler first having to declare the structure of a class or struct before you can instantiate instances of that type.
+
+Only then, items are evaluated.
+
+This has a few implications:
+
+- You may see items refer to values of properties _before_ that property has been defined. (If you were to look at the preprocessed XML you would see a property reference show up before the declaration.) This is OK as properties will all have been evaluated and computed prior to the item processing.
+- You cannot set a property value to the contents of an item or its metadata. That's because the properties are only evaluated once, and that happens before the item has any value or meaning.
