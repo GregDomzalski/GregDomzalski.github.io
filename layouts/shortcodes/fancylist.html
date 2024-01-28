@@ -1,4 +1,9 @@
-<div class="flex flex-col md:flex-row my-10 md:border-l md:border-w-gray-200">
+{{ $id := .Get "id" }}
+{{ if eq $id "" }}
+    {{ $id = .Get "Title" | lower | replaceRE " " "-" }}
+{{ end }}
+
+<div class="flex flex-col md:flex-row my-10 md:border-l md:border-w-gray-200" id="{{- $id -}}">
     <div class="md:w-1/5 md:pl-5 font-semibold text-gray-800">
         {{- .Get "Title" -}}
     </div>
