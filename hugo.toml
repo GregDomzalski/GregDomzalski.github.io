@@ -116,16 +116,24 @@ twitter = 'https://twitter.com/#'
     parent = "About me"
     pageRef = "/about/cv"
     weight = 10
+
   [[menu.main]]
-    name = 'Things I use'
+    name = "Things I use"
     parent = "About me"
-    pageRef = '/about/uses'
+    pageRef = "/about/uses"
     weight = 20
+
   [[menu.main]]
-    name = 'Contact'
+    name = "Things I want"
     parent = "About me"
-    pageRef = '/contact'
+    pageRef = "/about/wants"
     weight = 30
+
+  [[menu.main]]
+    name = "Contact"
+    parent = "About me"
+    pageRef = "/contact"
+    weight = 40
 
 [module]
   [module.hugoVersion]
