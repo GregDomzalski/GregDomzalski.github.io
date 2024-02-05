@@ -1,4 +1,10 @@
-# My want list
++++
+title = "Collectable items I'm looking for"
+date = "2024-02-05"
+lastMod = "2024-02-05"
+weight = "200"
+summary = "I collect \"retro\" or \"vintage\" computers, video game systems, and electronics. I'm always on the lookout for good deals or to simply help someone to clear out their attic. These are the things that I'm looking for."
++++
 
 Jump to the list: [Unobtanium](#unobtanium) | [Computers](#computers) | [Computer components](#computer-components) | [Game Systems](#game-systems) | [Software](#software) | [Synths](#synthesizers)
 
@@ -14,11 +20,11 @@ Then I hope you will consider working with me in getting your item(s) into a goo
 
 **What I'm looking for, generally:**
 
-Please reach out to me if you have any of the following specific items in the list below. These items are for my own collection; I do not ask for duplicates (with the exception of accessories like keyboards and monitors, of course) and I do *NOT* resell these listed items!! The one exception is if you are offering me a lot of games or accessories, I may list duplicate items for a fair price on Facebook Marketplace or offer them to other local collectors for free. I like to be fair!
+Please reach out to me if you have any of the following specific items in the list below. These items are for my own collection; I do not ask for duplicates (with the exception of accessories like keyboards and monitors, of course) and I do *NOT* resell these listed items!! The one exception is if you are offering me a bin or lot something like games or accessories. I may list duplicate items for a fair price on Facebook Marketplace or offer them to other local collectors for free.
 
 I am also willing to consider as-is or untested systems depending on the visible condition of the unit and whether or not I'm looking for spare parts.
 
-If you're looking to generally re-home other old electronics such as computers, CRT TV's or monitors, game systems and games, or audio equipment, I'm happy to take them. Don't give them to a place like Goodwill - they won't know what to do with them. Any general lots like this I will sort through. Whatever I don't keep will be sold to other collectors and half of the proceeds will be donated to the local non-profit https://www.kennettclassic.com/ Computer Museum. I want to make sure we're supporting our local community - not large national entities!
+If you're looking to generally re-home other old electronics such as computers, CRT TV's or monitors, game systems and games, or audio equipment, I'm happy to take them. Don't give them to a place like Goodwill - they won't know what to do with them. Any general lots like this I will sort through. Whatever I don't keep will be sold or shared with other local collectors. Half of any proceeds will be donated to the local non-profit [Kennett Classic](https://www.kennettclassic.com/) Computer Museum. I want to make sure we're supporting our local community - not large national entities!
 
 ***Special note:*** Please also be sure to check out my "Unobtainium" list. These items are not just on the list because they are rare and valuable, but because they *mean* something to me. There are stories behind why I want them. I'm willing to negotiate way more on terms to acquire the items. Even sharing leads or information is appreciated. And I'm always happy to share my stories.
 
@@ -26,11 +32,11 @@ If you're looking to generally re-home other old electronics such as computers, 
 
 Please contact me at: gregslist (dot) 3suvv (at) simplelogin (dot) com
 
-This is a privacy email address that will occasionally rotate depending on how much spam it brings in. Those 5 random characters are what will likely change over time. Obviously replace (dot) with . and (at) with @.
+This is a privacy email address that will occasionally rotate depending on how much spam it brings in. Those 5 random characters are what will likely change over time. Replace (dot) with . and (at) with @.
 
 **Where I'm willing to travel:**
 
-I am located near West Grove, PA in Chester County. I am willing to travel 20-40 miles for most systems, typically on Fridays or the weekend. For certain special items, I may consider traveling further, especially if you're willing to meet me along the way.
+I am located near West Grove, PA in Chester County. I am willing to travel 20-40 miles for most systems. Typically on Fridays or the weekend. For certain special items, I may consider traveling further, especially if you're willing to meet me along the way.
 
 **How I handle payment:**
 
