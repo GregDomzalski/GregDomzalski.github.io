@@ -7,10 +7,14 @@ titleCaseStyle = "none" # I'll take care of it myself, thank you.
 enableEmoji = true
 paginate = 3
 
+[frontmatter]
+  date = ['date']
+  lastmod = ['lastmod',':fileModTime']
+
 [social]
-linkedin = 'https://www.linkedin.com/in/gregdomzalski'
-github = 'https://github.com/GregDomzalski'
-twitter = 'https://twitter.com/#'
+  linkedin = 'https://www.linkedin.com/in/gregdomzalski'
+  github = 'https://github.com/GregDomzalski'
+  twitter = 'https://twitter.com/#'
 
 [params]
   [params.author]

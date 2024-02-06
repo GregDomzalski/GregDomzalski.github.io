@@ -1,6 +1,6 @@
 +++
 Title = "Building the blog"
-Date = 2023-11-12
+Date = '2023-11-12'
 Summary = """
 How exactly did I create this blog? In this post, I go over the process, the technologies used, and what's still left for me to build.
 """

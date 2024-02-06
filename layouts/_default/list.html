@@ -12,7 +12,7 @@
         {{ $padding := cond (not .Date) "pb-2" ""}}
         <a href="{{ .Permalink }}"><p class="text-xl font-semibold text-sky-700 {{ $padding }}">{{ .Title }}</p></a>
         {{ with .Date }}
-            <p class="text-sm text-gray-500 pb-2">Published: {{ .Format "January 01, 2006" }}</p>
+            <p class="text-sm text-gray-500 pb-2">Published: {{ .Format "January 02, 2006" }}</p>
         {{ end }}
         <p class="leading-relaxed">
             {{ .Summary }}
