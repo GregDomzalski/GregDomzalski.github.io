@@ -50,7 +50,7 @@ Thank you for your consideration and I look forward to our transactions!
 
     {{< fancylistitem Title="Atari" >}}
 
-- [Atari 800](https://en.wikipedia.org/wiki/Atari_8-bit_family)
+- ~~[Atari 800](https://en.wikipedia.org/wiki/Atari_8-bit_family)~~
 - [Atari ST](https://en.wikipedia.org/wiki/Atari_ST)
 
     {{< /fancylistitem >}}
@@ -60,7 +60,7 @@ Thank you for your consideration and I look forward to our transactions!
 - [Amiga 1000](https://en.wikipedia.org/wiki/Amiga_1000)
 - [Amiga 1200](https://en.wikipedia.org/wiki/Amiga_1200)
 - [Amiga 4000](https://en.wikipedia.org/wiki/Amiga_4000) / [4000T](https://en.wikipedia.org/wiki/Amiga_4000T)
-- [Commodore VIC-20](https://en.wikipedia.org/wiki/VIC-20)
+- ~~[Commodore VIC-20](https://en.wikipedia.org/wiki/VIC-20)~~
 - [Commodore Plus/4](https://en.wikipedia.org/wiki/Commodore_Plus/4)
 - [Commodore 128 / 128D](https://en.wikipedia.org/wiki/Commodore_128)
 
@@ -76,7 +76,8 @@ Thank you for your consideration and I look forward to our transactions!
 
     {{< fancylistitem Title="Radio Shack / TRS / Tandy" >}}
 
-- [TRS-80 Model 1](https://en.wikipedia.org/wiki/TRS-80)
+- ~~[TRS-80 Model 1](https://en.wikipedia.org/wiki/TRS-80)~~
+- [Tandy 2000](https://en.wikipedia.org/wiki/Tandy_2000)
   
     {{< /fancylistitem >}}
 
@@ -90,7 +91,7 @@ Thank you for your consideration and I look forward to our transactions!
     {{< fancylistitem Title="Silicon Graphics / SGI" >}}
 
 - [Indigo](https://en.wikipedia.org/wiki/SGI_Indigo)
-- [Indy](https://en.wikipedia.org/wiki/SGI_Indy)
+- ~~[Indy](https://en.wikipedia.org/wiki/SGI_Indy)~~
 - [Octane](https://en.wikipedia.org/wiki/SGI_Octane)
 - [Onyx (deskside)](https://en.wikipedia.org/wiki/SGI_Onyx)
 
@@ -106,7 +107,7 @@ Thank you for your consideration and I look forward to our transactions!
   - [Disk II](https://www.apple2history.org/history/ah05/) - 5.25" drive for Apple II / IIe
   - [Disk IIc](https://www.apple2history.org/history/ah09/) - 5.25" drive for Apple IIc
   - [Apple 3.5](https://www.apple2history.org/history/ah09/) - 3.5" drive for Apple IIc
-- [Apple Monitor II](https://en.wikipedia.org/wiki/Apple_Monitor_II)
+- ~~[Apple Monitor II](https://en.wikipedia.org/wiki/Apple_Monitor_II)~~
 - [Apple IIc monitor + stand](https://en.wikipedia.org/wiki/Apple_IIc)
 
     {{< /fancylistitem >}}
