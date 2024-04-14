@@ -58,10 +58,10 @@ Thank you for your consideration and I look forward to our transactions!
     {{< fancylistitem Title="Commodore" >}}
 
 - [Amiga 1000](https://en.wikipedia.org/wiki/Amiga_1000)
-- [Amiga 1200](https://en.wikipedia.org/wiki/Amiga_1200)
+- ~~[Amiga 1200](https://en.wikipedia.org/wiki/Amiga_1200)~~
 - [Amiga 4000](https://en.wikipedia.org/wiki/Amiga_4000) / [4000T](https://en.wikipedia.org/wiki/Amiga_4000T)
 - ~~[Commodore VIC-20](https://en.wikipedia.org/wiki/VIC-20)~~
-- [Commodore Plus/4](https://en.wikipedia.org/wiki/Commodore_Plus/4)
+- ~~[Commodore Plus/4](https://en.wikipedia.org/wiki/Commodore_Plus/4)~~
 - [Commodore 128 / 128D](https://en.wikipedia.org/wiki/Commodore_128)
 
     {{< /fancylistitem >}}

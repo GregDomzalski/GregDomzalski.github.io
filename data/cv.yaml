@@ -30,7 +30,7 @@ Work:
   - Entity: Yubico
     From: Dec 2020
     To: Dec 2021
-    Title: Software Engineer Manager
+    Title: Software Engineering Manager
     ShortDescription:
       Oversaw the teams responsible for developing Yubico's .NET SDK
       as well as our manufacturing and supply chain software.
@@ -45,7 +45,7 @@ Work:
   - Entity: Microsoft
     From: Jun 2008
     To: Nov 2017
-    Title: Software Development Engineer II
+    Title: Software Development Engineer
     ShortDescription: Worked in the Core OS group (Windows) developing storage
       management and backup technologies. Was the original principal author of
       the Windows Storage PowerShell cmdlets.
@@ -187,7 +187,7 @@ Education:
     Title: Bachelor of Science in Computer Science
     To: "2008"
     ShortDescription:
-      Acheived a B.S. in Computer Science, with a particular focus
+      Achieved a B.S. in Computer Science, with a particular focus
       on computer architecture, operating system design, and compiler design.
       Received additional liberal arts coursework as well, providing a well
       rounded formal education.
