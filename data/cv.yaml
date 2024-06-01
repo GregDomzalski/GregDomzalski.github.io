@@ -4,26 +4,34 @@ Order:
   - Education
 
 Work:
+  - Entity: Critical Shift
+    From: Jun 2024
+    To: Present
+    Title: Co-founder, Engineer
+    ShortDescription: Critical Shift builds specialized technical products at the intersection
+      of hardware, software, data, and security. We focus on bringing automation and efficiency
+      to businesses through products that respond to the needs of an entire industry.
+
   - Entity: Yubico
     From: Nov 2017
-    To: Present
+    To: Jun 2024
     Title: Staff Software Engineer
-    ShortDescription: Leading or engaged in several cross-company initiatives
-      ranging from improving our developer documentation, to improving our
+    ShortDescription: Lead or engaged in several cross-company initiatives
+      ranging from improving Yubico's developer documentation, to improving
       manufacturing, to exploring new product opportunities.
     Description: >
-      As a staff software engineer, I am not limited to a single project. I help
+      As a staff software engineer, I was not limited to a single project. I helped
       bring ideas and initiatives to fruition by influencing company leadership,
-      connecting individuals, and providing a cohesive vision. I seek out opportunities
+      connecting individuals, and providing a cohesive vision. I sought opportunities
       to increase efficiency, reduce technical debt and burden, and lift my team through
       mentorship and guidance.
 
 
-      The latest project of which I have contributed that has been publicly announced is
-      our FIDO2 pre-registration initiative in partnership with Okta. FIDO2 pre-registration
+      The last publicly announced project of which I had contributed was Yubico's FIDO2
+      pre-registration initiative in partnership with Okta. FIDO2 pre-registration
       reduces the friction for employees of companies using Okta + YubiKey by creating a
       credit-card like experience. Your company's IT staff only need register a user with a
-      FIDO factor in Okta, and we deliver a pre-configured key directly to your employee.
+      FIDO factor in Okta, and Yubico will deliver a pre-configured key directly to your employee.
       Once received, your employee can access your internal apps using the strongest form
       of authentication.
 
