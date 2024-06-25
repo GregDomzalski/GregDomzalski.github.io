@@ -59,7 +59,7 @@ Also recognize that if it weren't AI causing you this stress and anguish it woul
 
 We all experience self-doubt at times. That's completely normal.
 
-But if that self-doubt is preventing you from achieving your goals or is so frequent that it is making you miserable, that's when things cross the line into anxiety disorder territory. And that's OK. With help, you *can* get through it.
+But if that self-doubt is preventing you from achieving your goals or is so frequent that it is making you miserable, that's when things cross the line into anxiety disorder territory. That doesn't mean you're a failure. But it is something you should consider actively working through. With help, you *can* get through it.
 
 ## An engineering (or Comp Sci) degree is still worth a lot
 
