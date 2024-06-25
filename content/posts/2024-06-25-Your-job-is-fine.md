@@ -53,13 +53,13 @@ Poor mental health and self-confidence issues are endemic in our field. I am hea
 
 I empathize. I do. I've struggled with anxiety my entire adult life. It's hard and it sucks. But those statements just aren't true!
 
-If you find that you're saying these sorts of things to yourself, I urge you to consider talking to a professional. This is self-generated stress that you do not need to be suffering through. Like with anything meaningful, change won't happen overnight. It also probably won't occur on its own. Something like talk therapy may seem scary in itself. Or, you may think it's stigmatized and it would mean admitting to some sort of failure or shortcoming. Well, it is scary - or can be. But more scared than you already feel? And no, you're not a failure. The only person telling you that is yourself. To accept that this is just a self-narrative and actually *do* something about it? You're showing that you actually have the strength and the fortitude to grow as a human being. That should be celebrated.
+If you find that you're saying these sorts of things to yourself, I urge you to consider talking to a professional. This is self-generated stress that you do not need to be suffering through. Like with anything meaningful, change won't happen overnight. It also probably won't occur on its own. Something like talk therapy may seem scary in itself. Or, you may think it's stigmatized and it would mean admitting to some sort of failure or shortcoming. Well, it is scary - or can be. But more scary than what you're already feeling? Probably not. And no, you're not a failure. The only person telling you that is yourself. If you accept that this is just a self-narrative and actually *do* something about it? You're showing that you actually have the strength and the fortitude to grow as a human being. That should be celebrated.
 
 Also recognize that if it weren't AI causing you this stress and anguish it would likely be something else. The cyclical industry layoffs. A new tool or technology. A perception that someone else on your team is better than you. That you're not smart enough to do something.
 
 We all experience self-doubt at times. That's completely normal.
 
-But if that self-doubt is preventing you from achieving your goals or is so frequent that it is making you miserable, that's when things cross the line into anxiety disorder territory. That doesn't mean you're a failure. But it is something you should consider actively working through. With help, you *can* get through it.
+But if that self-doubt is preventing you from achieving your goals or is so frequent that it is making you miserable, that's when things cross the line into anxiety disorder territory. That doesn't mean you're a failure. But it isn't "normal" and is something you should consider actively working through. With help, you *can* get through it.
 
 ## An engineering (or Comp Sci) degree is still worth a lot
 
