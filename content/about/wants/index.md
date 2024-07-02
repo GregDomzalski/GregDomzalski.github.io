@@ -159,7 +159,7 @@ Thank you for your consideration and I look forward to our transactions!
 
 - Sega Game Gear (Handheld)
 - Sega Master System
-- Sega Saturn
+- ~~Sega Saturn~~
 - Sega Dreamcast
 - [Pioneer LaserActive + Sega add-on](https://en.wikipedia.org/wiki/LaserActive) ** Willing to make special arrangements for a working system.
 
